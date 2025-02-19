@@ -4,8 +4,8 @@ pragma solidity 0.8.28;
 contract Game {
     uint256[5] private correctArrange;
     uint256 public attempts;
-    bool public gameActive;
     address public player;
+    bool public gameActive;
 
     constructor() {
         _randomlyShuffleBottles();
@@ -17,6 +17,7 @@ contract Game {
         uint256[5] attempt,
         uint256 correctCount
     );
+
     event YouWon(address indexed player);
     event StartAllOver(address indexed player, uint256[5] reshuffle);
 
